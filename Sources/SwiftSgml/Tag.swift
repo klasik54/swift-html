@@ -7,8 +7,8 @@
 
 open class Tag {
 
-    public private(set) var node: Node
-    public private(set) var children: [Tag]
+    public var node: Node
+    public var children: [Tag]
     
     // MARK: - init
 
@@ -26,6 +26,15 @@ open class Tag {
     public convenience init(_ child: Tag) {
         self.init([child])
     }
+    
+    public func setNode(_ node: Node) {
+        self.node = node
+    }
+    
+//    public func appendChild(_ child: Tag) {
+//        self.children = self.children + [child]
+//    }
+    
 
     /// initialize a new Tag with children using a builder
     public convenience init(@TagBuilder _ builder: () -> Tag) {

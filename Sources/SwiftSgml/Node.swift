@@ -20,7 +20,7 @@ public struct Node {
     }
 
     public let type: NodeType
-    public let name: String?
+    public var name: String?
     public var contents: String?
     public internal(set) var attributes: [Attribute]
 
